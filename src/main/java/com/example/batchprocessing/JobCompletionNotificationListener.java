@@ -27,7 +27,7 @@ public class JobCompletionNotificationListener implements JobExecutionListener {
 			log.info("!!! JOB FINISHED! Time to verify the results");
 
 			jdbcTemplate
-					.query("SELECT first_name, last_name FROM people", new DataClassRowMapper<>(Person.class))
+					.query("SELECT first_name, last_name FROM people", new DataClassRowMapper<>(Person.class))		//DataClassRowMapper mapea cada fila del resultado de la consulta SQL a una instancia de la clase Person
 					.forEach(person -> log.info("Found <{{}}> in the database.", person));
 		}
 	}

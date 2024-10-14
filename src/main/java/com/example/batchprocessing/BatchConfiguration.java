@@ -66,4 +66,6 @@ public class BatchConfiguration {
 			.build();
 	}
 	// end::jobstep[]
+
+	//chunk()Tiene el prefijo <Person,Person>porque es un método genérico. Representa los tipos de entrada y salida de cada “fragmento” de procesamiento y se alinea con ItemReader<Person>y ItemWriter<Person>
 }
